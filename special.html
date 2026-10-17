@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+  Name: Ryan Reyes
+  Date: 2026-01-15
+  Section: WD 202
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specials - Danda's Pizza</title>
+  <meta name="description" content="Weekly specials at Danda's Pizza in Angeles City, plus catering requests for birthdays, family gatherings, and corporate events.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="container">
+    <header>
+      <a href="index.html">
+        <img src="img/danda's_main_logo.jpg" alt="Danda's Logo" />
+      </a>
+      <p class="brand">Danda's Pizza</p>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+    </header>
+
+    <nav id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="special.html" aria-current="page">Specials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main id="main">
+      <h1>Weekly Specials</h1>
+      <div id="specials">
+        <div class="tablet-desktop">
+         
+          <div class="table-wrap">
+          <table>
+            <caption>Danda's Pizza Weekly Specials</caption>
+            <tr>
+              <th>Day</th>
+              <th>Special</th>
+              <th>Savings</th>
+            </tr>
+            <tr>
+              <td>Monday</td>
+              <td>Buy 1 Get 1 Half Off (Overload &amp; Hawaiian)</td>
+              <td>Up to 50%</td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td>Family Size Orders</td>
+              <td>20% Off</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>Free Garlic Bread with Any Large Pizza</td>
+              <td>Free Item</td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>Pasta Combo (Lasagna or Carbonara + Drink)</td>
+              <td>15% Off</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>Free 1.5L Soda with Bucket of Fries</td>
+              <td>Free Item</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>Kids Eat Free (All Cheese Slice) with Adult Meal</td>
+              <td>Free Item</td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td>Entire Order</td>
+              <td>10% Off</td>
+            </tr>
+          </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="music-sample">
+        <h3>Listen to the upbeat vibes from our restaurant while you plan!</h3>
+        <audio controls>
+          <source src="media/pizza_audio.mp3" type="audio/mp3">
+          <p>Your browser does not support the audio element.</p>
+        </audio>
+      </div>
+
+      <div id="form">
+        <h2>Planning a Party? Request Catering</h2>
+        <form class="form-grid">
+          <fieldset>
+            <legend>Your Information</legend>
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname" id="fname" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" name="lname" id="lname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" name="phone" id="phone" required>
+          </fieldset>
+
+          <fieldset>
+            <legend>Event Details</legend>
+            <label for="eventdate">Event Date:</label>
+            <input type="date" name="eventdate" id="eventdate">
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" name="guests" id="guests" min="1">
+
+            <label for="eventtype">Event Type:</label>
+            <select name="eventtype" id="eventtype">
+              <option value="birthday">Birthday Party</option>
+              <option value="corporate">Corporate Event</option>
+              <option value="family">Family Gathering</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="message">Tell us more about your event:</label>
+            <textarea id="message" name="message" rows="5" cols="35"></textarea>
+          </fieldset>
+
+          <input type="submit" id="submit" value="Submit" class="btn">
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; Copyright 2026. All rights reserved. Created by Ryan Reyes</p>
+      <p><a href="http://dandaspizza.net">dandaspizza.net</a></p>
+    </footer>
+  </div>
+  <script>
+    const d = new Date().getDay();
+    const row = document.querySelectorAll("#specials table tr")[d === 0 ? 7 : d];
+    if (row) row.classList.add("today");
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+  Name: Ryan Reyes
+  Date: 2026-01-15
+  Section: WD 202
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danda's Pizza</title>
+  <meta name="description" content="Wood-fired pizza, pasta and fries made fresh in Sto. Domingo, Angeles City. Hand-stretched dough, fresh toppings, and a free slice with your first order.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="container">
+    <header>
+      <a href="index.html">
+        <img src="img/danda's_main_logo.jpg" alt="Danda's Logo" />
+      </a>
+      <p class="brand">Danda's Pizza</p>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+    </header>
+
+    <nav id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="special.html">Specials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main id="main">
+      <section class="hero">
+        <h1>Wood-fired pizza, made fresh in Angeles City</h1>
+        <p>Hand-stretched dough, fresh toppings, and a free slice with your first order.</p>
+        <div class="hero-actions">
+          <a href="tel:+639319399470" class="btn">Order Now</a>
+          <a href="menu.html" class="btn-outline">View Menu</a>
+        </div>
+      </section>
+      <section class="story about-split">
+        <figure class="about-figure">
+          <img src="img/woodfire.jpg" alt="Hand-stretching fresh pizza dough" loading="lazy">
+        </figure>
+        <div class="about-text">
+          <p class="lead">Throughout the years Danda's Pizza in Angeles City has become just as popular with visitors and tourists as it is with native Kapampangan who know where to come for a street slice.</p>
+          <p>Established in 2005 by John Reese, who is originally from Naples, Italy, the birthplace of pizza, Danda's Pizza has been offering the classic Kapampangan slice for over 20 years. At first, we served our customers from our corner location in Sto. Domingo.</p>
+        </div>
+      </section>
+
+      <section class="visit">
+        <h2>Visit us</h2>
+        <div class="visit-grid">
+          <div>
+            <h3>Find us</h3>
+            <p>704 Sto. Rosario St., Sto. Domingo, Angeles City</p>
+          </div>
+          <div>
+            <h3>Open daily</h3>
+            <p>10:00 AM &ndash; 10:00 PM</p>
+          </div>
+          <div>
+            <h3>Order by phone</h3>
+            <p><a href="tel:+639319399470" class="tel-link">0931 939 9470</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Copyright 2026. All rights reserved. Created by Ryan Reyes</p>
+      <p><a href="http://dandaspizza.net">dandaspizza.net</a></p>
+    </footer>
+  </div>
+  <script>
+    const deals = [
+      "Sunday: 10% off your entire order",
+      "Monday: Buy 1 Get 1 Half Off (Overload & Hawaiian)",
+      "Tuesday: 20% off family size orders",
+      "Wednesday: Free garlic bread with any large pizza",
+      "Thursday: Pasta combo (Lasagna or Carbonara + drink), 15% off",
+      "Friday: Free 1.5L soda with a bucket of fries",
+      "Saturday: Kids eat free (All Cheese slice) with an adult meal"
+    ];
+    const deal = document.getElementById("today-deal");
+    if (deal) deal.textContent = deals[new Date().getDay()];
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
